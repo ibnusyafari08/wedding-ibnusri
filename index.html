@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Sri & Ibnu</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+    /* 1. Reset Kotak Galeri agar ukurannya fleksibel */
+    .gallery-item {
+        width: 100%;                /* Lebar mengikuti kolom Bootstrap */
+        height: auto !important;    /* PENTING: Tinggi mengikuti isi foto */
+        
+        /* Desain Bingkai */
+        padding: 5px;               /* Jarak antara foto dan garis bingkai */
+        background-color: #fff;     /* Warna latar bingkai (putih) */
+        border: 2px solid #d4af37;  /* Warna Garis Bingkai (Emas) */
+        border-radius: 10px;        /* Sudut bingkai melengkung */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sedikit bayangan */
+        
+        cursor: pointer;            /* Ubah kursor jadi jari saat disentuh */
+        transition: transform 0.3s; /* Efek halus saat disentuh */
+    }
+
+    /* 2. Mengatur Gambar agar Full & Pas */
+    .gallery-item img {
+        width: 100%;                /* Lebar gambar memenuhi bingkai */
+        height: auto !important;    /* Tinggi otomatis (agar proporsional) */
+        object-fit: contain;        /* Pastikan gambar utuh */
+        border-radius: 5px;         /* Melengkungkan sudut foto sedikit */
+        display: block;             /* Menghilangkan celah kecil di bawah foto */
+    }
+
+    /* Efek saat mouse diarahkan (Opsional) */
+    .gallery-item:hover {
+        transform: scale(1.02);     /* Sedikit membesar saat disorot */
+    }
+</style>
+    <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    </head>
+</head>
+
+<body class="noscroll">
+
+    <section id="hero" class="vh-100 w-100 position-relative d-flex justify-content-center align-items-center overflow-hidden">
+        
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative z-2 text-center text-white">
+            
+            <div class="gold-line mb-4 mx-auto"></div>
+
+            <p class="wedding-subtitle text-uppercase tracking-widest mb-2">The Wedding of</p>
+
+            <h1 class="couple-names mb-4">
+                Ibnu Syafari <br>
+                <span class="ampersand">&</span> <br>
+                Sri Wahyuni
+            </h1>
+
+            <div class="gold-line mt-2 mb-5 mx-auto"></div>
+
+            <div class="guest-wrapper mx-auto">
+                <p class="invitation-text mb-3">
+                    Kepada Bapak/Ibu/Saudara/i <br> serta Kerabat sekalian:
+                </p>
+
+                <div class="guest-card mb-4">
+                    <div class="card-glow"></div>
+                    <h3 id="nama-tamu">Nama Tamu</h3>
+                </div>
+
+                <button id="btn-open" class="btn btn-premium">
+                    <i class="bi bi-envelope-paper-heart me-2"></i> Buka Undangan
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="opening" class="position-relative w-100 overflow-hidden d-flex align-items-end justify-content-center">
+        
+        <div class="opening-bg position-absolute w-100 h-100 top-0 start-0"></div>
+        <div class="opening-overlay position-absolute w-100 h-100 top-0 start-0"></div>
+
+        <img src="assets/floral-maroon-left.webp" class="flower flower-tl" alt="bunga">
+        <img src="assets/floral-maroon-right.webp" class="flower flower-tr" alt="bunga">
+        
+        <img src="assets/janur-kanan.webp" class="flower flower-ml" alt="bunga">
+        <img src="assets/janur-kiri.webp" class="flower flower-mr" alt="bunga">
+
+        <img src="assets/floral-maroon-left.webp" class="flower flower-bl" alt="bunga">
+        <img src="assets/floral-maroon-right.webp" class="flower flower-br" alt="bunga">
+
+        <div class="container position-relative z-2 text-center" style="height: 100%;">
+            
+            <div class="building-container position-absolute start-50 translate-middle-x">
+                <img src="assets/bangunan.webp" alt="Gedung" class="building-img">
+            </div>
+
+            <div class="couple-wrapper d-flex justify-content-center align-items-end">
+                <div class="bride-box">
+                    <img src="assets/wanita.webp" alt="Wanita" class="couple-img img-bride">
+                </div>
+                <div class="groom-box">
+                    <img src="assets/pria.webp" alt="Pria" class="couple-img img-groom">
+                </div>
+            </div>
+
+            <div class="opening-text position-absolute w-100 text-white">
+                <h2 class="couple-names-small"></h2>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="quran" class="py-5 position-relative">
+    
+    <div class="quran-overlay"></div>
+
+    <div class="container position-relative z-2" data-aos="fade-up">
+        
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                
+                <div class="quran-card p-4 p-md-5 text-center text-white">
+                    
+                    <div class="gold-line mb-4 mx-auto" style="width: 50px;"></div>
+                    
+                    <h5 class="surah-title mb-4">QS. Ar-Rum : 21</h5>
+
+                    <p class="ayat-quran mb-4" dir="rtl">
+                        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+                    </p>
+
+                    <p class="arti-quran">
+                        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+                    </p>
+                    
+                    <div class="gold-line mt-4 mx-auto" style="width: 50px;"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="mempelai" class="py-5 position-relative">
+        <div class="container text-center text-white position-relative z-2">
+            
+            <p class="wedding-subtitle text-uppercase tracking-widest mb-2">The Happy Couple</p>
+            <h2 class="section-title mb-5">Mempelai</h2>
+
+            <div class="row justify-content-center align-items-center gy-4">
+    
+    <div class="col-12 col-md-5">
+        <div class="mempelai-card" data-aos="fade-right">
+            <div class="img-frame mb-4">
+                <img src="assets/mempelai-pria.png" alt="Ibnu Syafari" class="mempelai-img">
+            </div>
+            <h3 class="mempelai-name">Ibnu Syafari</h3>
+            <p class="mempelai-parents mt-3">
+                Putra Kedua dari <br>
+                Bapak H. Ony Syafari & Ibu Hj. Winda Andriani
+            </p>
+            <a href="https://www.instagram.com/rfys.ibnu?igsh=NjFqM3Q5aXZ2eTJi&utm_source=qr" target="_blank" class="btn-ig mt-2 mb-3">
+                <i class="bi bi-instagram"></i> @rfys.ibnu
+            </a>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-2 py-2">
+        <span class="ampersand-large">❤</span>
+    </div>
+
+    <div class="col-12 col-md-5">
+        <div class="mempelai-card" data-aos="fade-left">
+            <div class="img-frame mb-4">
+                <img src="assets/mempelai-wanita.png" alt="Sri Wahyuni" class="mempelai-img">
+            </div>
+            <h3 class="mempelai-name">Sri Wahyuni</h3>
+            <p class="mempelai-parents mt-3">
+                Putri Ketiga dari <br>
+                Bapak Rajimin & Ibu Nurhayati
+            </p>
+            <a href="https://www.instagram.com/swhyni8?utm_source=qr" target="_blank" class="btn-ig mt-2 mb-3">
+                <i class="bi bi-instagram"></i> @swhyni8
+            </a>
+        </div>
+    </div>
+
+</div>
+        </div>
+    </section>
+
+    <section id="acara" class="py-5 position-relative">
+    <div class="container text-white position-relative z-2">
+        
+        <div class="text-center mb-5" data-aos="fade-up">
+            <p class="wedding-subtitle text-uppercase tracking-widest mb-2">Save The Date</p>
+            <h2 class="section-title">Informasi Acara</h2>
+        </div>
+
+        <div class="row justify-content-center gy-4">
+            
+            <div class="col-md-5">
+                <div class="event-card text-center" data-aos="fade-right" data-aos-delay="300">
+                    <h3 class="event-title">Akad Nikah</h3>
+                    
+                    <div class="event-icon my-3 floating-anim">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16">
+                            <path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.644L3.1.7z"/>
+                        </svg>
+                    </div>
+
+                    <p class="event-date">Selasa, 10 Maret 2026</p>
+                    <p class="event-time">Pukul 09.00 WIB - Selesai</p>
+                    
+                    <p class="event-location mt-3">
+                        <strong>KUA Kec. Pemangkat</strong><br>
+                        Jl. Pelabuhan, Pemangkat Kota, Kab. Sambas
+                    </p>
+
+                    <div class="countdown-simple my-4" id="countdown-akad">Loading...</div>
+
+                    <a href="https://maps.app.goo.gl/TtcqS9XRRN2sn2Sx5" target="_blank" class="btn btn-outline-gold btn-sm">
+                        <i class="bi bi-geo-alt-fill me-1"></i> Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="event-card text-center" data-aos="fade-left" data-aos-delay="600">
+                    <h3 class="event-title">Resepsi</h3>
+                    
+                    <div class="event-icon my-3 floating-anim">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                        </svg>
+                    </div>
+
+                    <p class="event-date">Minggu, 26 April 2026</p>
+                    <p class="event-time">Pukul 13.00 WIB - Selesai</p>
+                    
+                    <p class="event-location mt-3">
+                        <strong>Kediaman Mempelai Wanita</strong><br>
+                        Jl. SDN 4, Gang H.Asmadi Busri, Desa Harapan, Kec.Pemangkat
+                    </p>
+
+                    <div class="countdown-simple my-4" id="countdown-resepsi">Loading...</div>
+
+                    <a href="https://maps.app.goo.gl/uykkZ1PwsKgTBsUH8" target="_blank" class="btn btn-outline-gold btn-sm">
+                        <i class="bi bi-geo-alt-fill me-1"></i> Google Maps
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="story" class="py-5 position-relative">
+    <div class="container position-relative z-2">
+        
+        <div class="text-center mb-5" data-aos="fade-up">
+            <p class="wedding-subtitle text-uppercase tracking-widest mb-2">Our Journey</p>
+            <h2 class="section-title">Cinta Kami</h2>
+            <div class="gold-line"></div> </div>
+
+        <div class="timeline-wrapper position-relative">
+            
+            <div class="timeline-line"></div>
+
+            <div class="row timeline-item align-items-center left-block mb-5">
+                <div class="col-md-6 order-2 order-md-1">
+                    <div class="story-content text-md-end" data-aos="fade-right" data-aos-delay="300">
+                        <h3 class="story-title">Awal Pertemuan</h3>
+                        <span class="story-date">Semasa SMP (2014)</span>
+                        <p class="story-desc mt-3">
+                             Di masa SMP, kami pertama kali bertemu. Awalnya, kami tidak terlalu dekat-hanya sebatas saling mengenal. Namun, seiring waktu, tumbuh rasa nyaman yang membuat kami semakin akrab, menjadi awal dari sebuah persahabatan yang berarti.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-2 position-relative text-center">
+                    <div class="story-marker z-3"></div>
+                    <div class="story-img-box mx-auto z-2" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="assets/timeline-1.webp" alt="Awal Pertemuan" class="story-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row timeline-item align-items-center right-block mb-5">
+                <div class="col-md-6 order-1 position-relative text-center">
+                     <div class="story-marker z-3"></div>
+                    <div class="story-img-box mx-auto z-2" data-aos="zoom-in" data-aos-delay="400">
+                         <img src="assets/timeline-2.webp" alt="Mulai Dekat" class="story-img">
+                    </div>
+                </div>
+                <div class="col-md-6 order-2">
+                    <div class="story-content text-md-start" data-aos="fade-left" data-aos-delay="400">
+                        <h3 class="story-title">Mulai Dekat</h3>
+                        <span class="story-date">Lulus SMP (2015)</span>
+                        <p class="story-desc mt-3">
+                            langkah kami mulai bercabang, masing-masing menuju sekolah yang berbeda. Tapi anehnya, jarak tak pernah mampu memisahkan kami. Satu tahun bersama di kelas itu telah menorehkan begitu banyak tawa, canda, dan rahasia kecil yang kini terasa seperti harta karun kenangan. Persahabatan yang terjalin begitu dekat itu seakan menegaskan bahwa ikatan hati tak selalu diukur dari jarak-melainkan dari momen yang kami bagi bersama.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row timeline-item align-items-center left-block mb-5">
+                <div class="col-md-6 order-2 order-md-1">
+                    <div class="story-content text-md-end" data-aos="fade-right" data-aos-delay="500">
+                        <h3 class="story-title">Mulai Serius</h3>
+                        <span class="story-date">08 Agustus 2015</span>
+                        <p class="story-desc mt-3">
+                            Dari sebuah tanggal yang sederhana, lahirlah komitmen luar biasa. Hari jadian menjadi saksi awal cerita kami, dan hari ini kami memilih untuk mengikat janji dalam satu ikatan pernikahan.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-2 position-relative text-center">
+                    <div class="story-marker z-3"></div>
+                    <div class="story-img-box mx-auto z-2" data-aos="zoom-in" data-aos-delay="500">
+                         <img src="assets/timeline-3.webp" alt="Mulai Serius" class="story-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row timeline-item align-items-center right-block mb-5">
+                <div class="col-md-6 order-1 position-relative text-center">
+                    <div class="story-marker z-3"></div>
+                    <div class="story-img-box mx-auto z-2" data-aos="zoom-in" data-aos-delay="600">
+                         <img src="assets/timeline-4.webp" alt="Lamaran" class="story-img">
+                    </div>
+                </div>
+                <div class="col-md-6 order-2">
+                    <div class="story-content text-md-start" data-aos="fade-left" data-aos-delay="600">
+                        <h3 class="story-title">Lamaran</h3>
+                        <span class="story-date">27 Desember 2025</span>
+                        <p class="story-desc mt-3">
+                            Lamaran menjadi langkah awal dalam menyempurnakan ibadah. Dengan niat yang baik dan doa keluarga, kami memantapkan hati untuk melanjutkan perjalanan ini ke jenjang pernikahan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row timeline-item align-items-center justify-content-center mb-5">
+                <div class="col-md-8 text-center position-relative">
+                     <div class="story-marker marker-end z-3">
+                        <i class="bi bi-heart-fill"></i>
+                    </div>
+                    <div class="story-img-box mx-auto z-2 mt-5" style="width: 250px; height: 250px;" data-aos="zoom-up" data-aos-delay="700">
+                         <img src="assets/timeline-5.webp" alt="Pernikahan" class="story-img">
+                    </div>
+                    <div class="story-content mt-4" data-aos="fade-up" data-aos-delay="800">
+                        <h3 class="story-title" style="font-size: 2rem;">The Wedding Day</h3>
+                        <span class="story-date main-date" style="font-size: 1.2rem; color:#bf953f;">10 Maret 2026</span>
+                        <p class="story-desc mt-3 w-75 mx-auto">
+                            Pada akhirnya setelah menjalani hubungan selama lebih dari satu dasawarsa hari yang telah kami mimpikan pun tiba. Hari ini bukan hanya tentang menyatukan dua insan, tetapi tentang mengikat janji untuk saling pulang dan saling setia dalam ikatan pernikahan. Kami percaya, cinta yang baik akan berakhir pada pernikahan. Hari ini, kami memulai babak baru sebagai sepasang suami istri. <br> <br> 08-08-2015 / 10-03-2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div>
+</section>
+
+<section id="gallery" class="py-5 position-relative bg-dark-texture">
+    <div class="container position-relative z-2">
+        
+        <div class="text-center mb-5" data-aos="fade-up">
+            <p class="wedding-subtitle text-uppercase tracking-widest mb-2">Our Moments</p>
+            <h2 class="section-title">Galeri Foto</h2>
+            <div class="gold-line"></div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-10" data-aos="zoom-in" data-aos-delay="300">
+                <div id="galleryCarousel" class="carousel slide carousel-fade gallery-frame" data-bs-ride="carousel">
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active" data-bs-interval="2500">
+                            <img src="assets/gallery/slide/foto-background-1.webp" class="d-block w-100 gallery-slide-img" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <img src="assets/gallery/slide/foto-background-2.webp" class="d-block w-100 gallery-slide-img" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <img src="assets/gallery/slide/foto-background-3.webp" class="d-block w-100 gallery-slide-img" alt="Slide 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 justify-content-center">
+            
+            <div class="col-lg-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="gallery-item" onclick="showLightbox(this)" 
+                     data-full="assets/gallery/thumbnail/thumbnail-1.png">
+                    <img src="assets/gallery/thumbnail-1-kecil.webp" alt="Gallery 1" class="img-fluid w-100">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="gallery-item" onclick="showLightbox(this)" 
+                     data-full="assets/gallery/thumbnail/thumbnail-2.PNG">
+                    <img src="assets/gallery/thumbnail-2-kecil.webp" alt="Gallery 2" class="img-fluid w-100">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="gallery-item" onclick="showLightbox(this)" 
+                     data-full="assets/gallery/thumbnail/thumbnail-3.JPG">
+                    <img src="assets/gallery/thumbnail-3-kecil.webp" alt="Gallery 3" class="img-fluid w-100">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6" data-aos="fade-up" data-aos-delay="700">
+                <div class="gallery-item" onclick="showLightbox(this)" 
+                     data-full="assets/gallery/thumbnail/thumbnail-4.JPG">
+                    <img src="assets/gallery/thumbnail-4-kecil.webp" alt="Gallery 4" class="img-fluid w-100">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6" data-aos="fade-up" data-aos-delay="800">
+                <div class="gallery-item" onclick="showLightbox(this)" 
+                     data-full="assets/gallery/thumbnail/thumbnail-5.jpeg">
+                    <img src="assets/gallery/thumbnail-5-kecil.webp" alt="Gallery 5" class="img-fluid w-100">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-6" data-aos="fade-up" data-aos-delay="900">
+                <div class="gallery-item" onclick="showLightbox(this)" 
+                     data-full="assets/gallery/thumbnail/thumbnail-6.PNG">
+                    <img src="assets/gallery/thumbnail-6-kecil.webp" alt="Gallery 6" class="img-fluid w-100">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="rsvp" class="rsvp section-bg">
+  <div class="container">
+    
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-8 col-10 text-center">
+        <h2 class="section-title fade-up">Konfirmasi Kehadiran</h2>
+        <p class="section-subtitle fade-up">Kehadiran Anda adalah doa restu bagi kami.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-12">
+        <div class="custom-form-card fade-up">
+            
+            <form id="my-form" class="row g-4 justify-content-center">
+  
+  <div class="col-md-5 col-12">
+    <label class="form-label-premium">Nama Tamu</label>
+    <input 
+      type="text" 
+      class="form-control form-control-premium" 
+      id="nama" 
+      name="nama" 
+      placeholder="Masukan Nama Lengkap" 
+      required
+    >
+  </div>
+
+  <div class="col-md-2 col-6">
+    <label class="form-label-premium">Jumlah</label>
+    <select name="jumlah" id="jumlah" class="form-select form-select-premium" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+
+  <div class="col-md-5 col-6">
+    <label class="form-label-premium">Konfirmasi</label>
+    <select name="status" id="status" class="form-select form-select-premium" required>
+      <option value="" selected disabled>Pilih Status</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Maaf, Tidak Bisa</option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <label class="form-label-premium">Ucapan & Doa</label>
+    <textarea
+      class="form-control form-control-premium"
+      id="komentar"
+      name="komentar"
+      rows="4"
+      placeholder="Tuliskan ucapan & doa restu..."
+      required
+    ></textarea>
+  </div>
+
+  <div class="col-12 text-center mt-4">
+    <button type="submit" class="btn btn-premium">
+      Kirim Konfirmasi <i class="bi bi-send-fill ms-2"></i>
+    </button>
+  </div>
+</form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="text-center mb-4">
+        <h3 class="sub-title-premium">Doa & Ucapan</h3>
+        <hr class="divider-gold">
+      </div>
+      
+      <div id="bukuTamu" class="row justify-content-center">
+          </div>
+
+      <div class="d-flex justify-content-center mt-4">
+        <nav>
+          <ul class="pagination pagination-premium justify-content-center" id="pagination"></ul>
+        </nav>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="gifts">
+  <div class="container">
+    
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title">Wedding Gift</h2>
+      <div class="gold-line"></div>
+      <p class="wedding-subtitle mt-3">
+        Doa restu Anda merupakan karunia yang sangat berarti bagi kami.<br>
+        Namun jika memberi adalah ungkapan tanda kasih Anda, kami menerima dengan senang hati.
+      </p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="gift-card-box">
+          <i class="bi bi-box2-heart-fill gift-icon"></i>
+          <h5 class="gift-title">Kirim Hadiah</h5>
+          <p class="gift-desc">
+            <strong>Jl. SDN 04, Gg. Asmadi Busri No.79 RT007/RW008</strong><br>
+            Dusun Mekar Lestari, Desa Harapan, <br> Kec. Pemangkat, Kab. Sambas, Kalimantan Barat. <br> Kode Pos 79455
+          </p>
+          <a href="https://maps.app.goo.gl/uykkZ1PwsKgTBsUH8" target="_blank" class="btn btn-outline-gold mt-2">
+            <i class="bi bi-map-fill"></i> Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="gift-card-box d-flex flex-column justify-content-center">
+          
+          <div class="atm-card-dark text-start">
+            <div class="d-flex justify-content-between align-items-start">
+               <img src="assets/chip.png" class="atm-chip" alt="Chip">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" class="atm-logo" alt="Bank Logo">
+            </div>
+            
+            <div class="mt-2">
+              <small class="text-white opacity-50" style="letter-spacing: 2px;">NOMOR REKENING</small>
+              <div class="atm-number" id="rek-bca">8171 5115 00</div>
+              <div class="atm-name">A.N. SRI WAHYUNI</div>
+            </div>
+          </div>
+          <div>
+            <button onclick="copyText('rek-bca', '1234567890')" class="btn-copy-gold">
+              <i class="bi bi-files"></i> Salin No. Rekening
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="gift-card-box">
+          <h5 class="gift-title mb-3">Dompet Digital</h5>
+          
+          <div class="qr-wrapper">
+             <img src="assets/QR Dana Sri.jpeg" class="qr-img" alt="QR Code DANA">
+          </div>
+          
+          <h5 class="mt-3 text-white fw-bold">DANA</h5>
+          <p class="gift-desc mb-0">a.n. Sri Wahyuni</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="footer-section">
+    <div class="custom-shape-divider-top">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="container position-relative z-index-1">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                
+                <div class="footer-content fade-up">
+                    <p class="mb-4 text-white-50" style="font-size: 0.9rem;">
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami<br>
+                        apabila Bapak/Ibu/Saudara/i berkenan hadir<br>
+                        untuk memberikan doa restu kepada kami.
+                    </p>
+
+                    <h5 class="text-gold mb-2">Kami yang berbahagia,</h5>
+                    
+                    <h1 class="footer-couple-name mb-4">Ibnu Syafari <br> & <br> Sri Wahyuni</h1>
+
+                    <p class="small text-white-50 mb-4">
+                        Keluarga Besar Bpk. H. Ony Syafari & Ibu Hj. Winda Andriani <br>
+                        & <br>
+                        Keluarga Besar Bpk. Rajimin & Ibu Nurhayati
+                    </p>
+
+                    <hr class="footer-divider mx-auto">
+
+                    <div class="copyright mt-3">
+                        <small class="text-white-50">
+                            &copy; 2026. Made with <i class="bi bi-heart-fill text-danger"></i> by 
+                            <a href="#" class="text-gold text-decoration-none fw-bold">Ibnu Syafari</a>
+                        </small>
+                    </div>
+
+                    <div class="mt-3">
+    <a href="https://www.instagram.com/rfys.ibnu?igsh=NjFqM3Q5aXZ2eTJi&utm_source=qr" target="_blank" class="text-white-50 mx-2 fs-4">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/6285752068950?text=Selamat%20Atas%20Penikahannya,%20Semoga%20menjadi%20keluarga%20yang%20sakinah,%20mawaddah,%20warahmah..." target="_blank" class="text-white-50 mx-2 fs-4">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <button id="music-btn" class="music-box" style="display: none;"> 
+        <i id="music-icon" class="bi bi-disc"></i>
+    </button>
+
+    <audio id="bg-music" loop>
+        <source src="assets/audio/song.mp3" type="audio/mp3">
+    </audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, /* Durasi animasi 1 detik */
+    once: true,     /* Animasi hanya sekali jalan (tidak ulang-ulang saat scroll naik) */
+    offset: 100     /* Muncul sebelum elemen benar-benar terlihat */
+  });
+</script>
+
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body position-relative p-0 text-center">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="" id="lightboxImg" class="img-fluid rounded shadow-lg" alt="Zoomed Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showLightbox(element) {
+        // 1. Ambil link dari data-full
+        var fullImageSrc = element.getAttribute('data-full');
+        
+        // 2. Ambil elemen gambar di modal
+        var modalImage = document.getElementById('lightboxImg');
+        
+        // 3. Ambil elemen modalnya
+        var modalElement = document.getElementById('galleryModal');
+
+        // 4. Cek apakah elemen ada?
+        if (modalImage && modalElement) {
+            // Set sumber gambar
+            modalImage.src = fullImageSrc;
+            
+            // Tampilkan Modal menggunakan Bootstrap
+            var myModal = new bootstrap.Modal(modalElement);
+            myModal.show();
+        } else {
+            console.error("Error: Elemen Modal tidak ditemukan!");
+        }
+    }
+</script>
+
+</body>
+</html>
