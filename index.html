@@ -94,40 +94,78 @@
 
 
     <section id="opening" class="position-relative w-100 overflow-hidden d-flex align-items-end justify-content-center">
-        
-        <div class="opening-bg position-absolute w-100 h-100 top-0 start-0"></div>
-        <div class="opening-overlay position-absolute w-100 h-100 top-0 start-0"></div>
 
-        <img src="assets/floral-maroon-left.webp" class="flower flower-tl" alt="bunga">
-        <img src="assets/floral-maroon-right.webp" class="flower flower-tr" alt="bunga">
-        
-        <img src="assets/janur-kanan.webp" class="flower flower-ml" alt="bunga">
-        <img src="assets/janur-kiri.webp" class="flower flower-mr" alt="bunga">
+    <!-- BACKGROUND -->
+    <div class="opening-bg position-absolute inset-0"></div>
+    <div class="opening-overlay position-absolute inset-0"></div>
 
-        <img src="assets/floral-maroon-left.webp" class="flower flower-bl" alt="bunga">
-        <img src="assets/floral-maroon-right.webp" class="flower flower-br" alt="bunga">
+    <!-- SVG ORNAMEN FULL SCREEN -->
+    <div class="svg-ornament svg-frame"></div>
+    <div class="svg-ornament svg-pattern"></div>
+    <div class="svg-ornament svg-corners"></div>
 
-        <div class="container position-relative z-2 text-center" style="height: 100%;">
-            
-            <div class="building-container position-absolute start-50 translate-middle-x">
-                <img src="assets/bangunan.webp" alt="Gedung" class="building-img">
-            </div>
+    <!-- SVG ORNAMENT INLINE -->
+<svg class="svg-ornament svg-frame" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <defs>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#bf953f"/>
+            <stop offset="50%" stop-color="#e6c77b"/>
+            <stop offset="100%" stop-color="#8e6b2f"/>
+        </linearGradient>
+    </defs>
 
-            <div class="couple-wrapper d-flex justify-content-center align-items-end">
-                <div class="bride-box">
-                    <img src="assets/wanita.webp" alt="Wanita" class="couple-img img-bride">
-                </div>
-                <div class="groom-box">
-                    <img src="assets/pria.webp" alt="Pria" class="couple-img img-groom">
-                </div>
-            </div>
+    <path d="M0,0 L100,0 L95,5 L5,5 Z" fill="url(#goldGrad)" opacity="0.25"/>
+    <path d="M0,100 L100,100 L95,95 L5,95 Z" fill="url(#goldGrad)" opacity="0.25"/>
+</svg>
 
-            <div class="opening-text position-absolute w-100 text-white">
-                <h2 class="couple-names-small"></h2>
-            </div>
+<svg class="svg-ornament svg-pattern" viewBox="0 0 100 100">
+    <defs>
+        <pattern id="floralPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="2" fill="#bf953f" opacity="0.25"/>
+        </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#floralPattern)"/>
+</svg>
 
+<svg class="svg-ornament svg-corners" viewBox="0 0 100 100">
+    <circle cx="0" cy="0" r="25" fill="#bf953f" opacity="0.12"/>
+    <circle cx="100" cy="0" r="25" fill="#bf953f" opacity="0.12"/>
+    <circle cx="0" cy="100" r="25" fill="#bf953f" opacity="0.12"/>
+    <circle cx="100" cy="100" r="25" fill="#bf953f" opacity="0.12"/>
+</svg>
+
+    <!-- BUNGA PNG -->
+    <img src="assets/floral-maroon-left.webp" class="flower flower-tl" alt="bunga">
+    <img src="assets/floral-maroon-right.webp" class="flower flower-tr" alt="bunga">
+    <img src="assets/janur-kanan.webp" class="flower flower-ml" alt="bunga">
+    <img src="assets/janur-kiri.webp" class="flower flower-mr" alt="bunga">
+    <img src="assets/floral-maroon-left.webp" class="flower flower-bl" alt="bunga">
+    <img src="assets/floral-maroon-right.webp" class="flower flower-br" alt="bunga">
+
+    <!-- CONTENT -->
+    <div class="container position-relative text-center" style="height: 100%; z-index: 10;">
+
+        <div class="building-container position-absolute start-50 translate-middle-x">
+            <img src="assets/bangunan.webp" alt="Gedung" class="building-img">
         </div>
-    </section>
+
+        <div class="couple-wrapper d-flex justify-content-center align-items-end">
+            <div class="bride-box">
+                <img src="https://res.cloudinary.com/dir7zfoqj/image/upload/v1770303463/WhatsApp_Image_2026-02-05_at_21.51.58-removebg-preview_goomad.webp"
+                     class="couple-img img-bride" alt="Mempelai Wanita">
+            </div>
+            <div class="groom-box">
+                <img src="https://res.cloudinary.com/dir7zfoqj/image/upload/v1770303463/WhatsApp_Image_2026-02-05_at_21.52.04-removebg-preview_yroldm.webp"
+                     class="couple-img img-groom" alt="Mempelai Pria">
+            </div>
+        </div>
+
+        <div class="opening-text position-absolute w-100">
+            <h2 class="couple-names-small"></h2>
+        </div>
+
+    </div>
+</section>
 
     <section id="quran" class="py-5 position-relative">
     
@@ -141,13 +179,16 @@
                 <div class="quran-card p-4 p-md-5 text-center text-white">
                     
                     <div class="gold-line mb-4 mx-auto" style="width: 50px;"></div>
+                    <p class="wedding-subtitle text-uppercase tracking-widest mb-2">Al-Quran Surah</p>
                     
-                    <h5 class="surah-title mb-4">QS. Ar-Rum : 21</h5>
+                    <h5 class="surah-title mb-4">Ar-Rum : 21</h5>
 
                     <p class="ayat-quran mb-4" dir="rtl">
-                        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+      بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
+      <br>
+      <br>
+وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ ۝٢١
                     </p>
-
                     <p class="arti-quran">
                         "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
                     </p>
@@ -167,14 +208,14 @@
         <div class="container text-center text-white position-relative z-2">
             
             <p class="wedding-subtitle text-uppercase tracking-widest mb-2">The Happy Couple</p>
-            <h2 class="section-title mb-5">Mempelai</h2>
+            <h2 class="section-title mb-5">Ibnu & Sri</h2>
 
             <div class="row justify-content-center align-items-center gy-4">
     
     <div class="col-12 col-md-5">
         <div class="mempelai-card" data-aos="fade-right">
             <div class="img-frame mb-4">
-                <img src="assets/mempelai-pria.png" alt="Ibnu Syafari" class="mempelai-img">
+                <img src="https://res.cloudinary.com/dir7zfoqj/image/upload/v1770655650/Foto_latar_biru_ibnu_tmaiby.webp" alt="Ibnu Syafari" class="mempelai-img">
             </div>
             <h3 class="mempelai-name">Ibnu Syafari</h3>
             <p class="mempelai-parents mt-3">
@@ -188,13 +229,13 @@
     </div>
 
     <div class="col-12 col-md-2 py-2">
-        <span class="ampersand-large">❤</span>
+        <span class="ampersand-large">&</span>
     </div>
 
     <div class="col-12 col-md-5">
         <div class="mempelai-card" data-aos="fade-left">
             <div class="img-frame mb-4">
-                <img src="assets/mempelai-wanita.png" alt="Sri Wahyuni" class="mempelai-img">
+                <img src="https://res.cloudinary.com/dir7zfoqj/image/upload/v1770655651/Foto_latar_biru_sri_am0t3u.webp" alt="Sri Wahyuni" class="mempelai-img">
             </div>
             <h3 class="mempelai-name">Sri Wahyuni</h3>
             <p class="mempelai-parents mt-3">
@@ -469,8 +510,9 @@
     
     <div class="row justify-content-center mb-5">
       <div class="col-md-8 col-10 text-center">
+        <p class="wedding-subtitle text-uppercase tracking-widest mb-2">R S V P</p>
         <h2 class="section-title fade-up">Konfirmasi Kehadiran</h2>
-        <p class="section-subtitle fade-up">Kehadiran Anda adalah doa restu bagi kami.</p>
+        <p class="section-subtitle fade-up">Isi form dibawah ini untuk mengkonfirmasi kehadiran.</p>
       </div>
     </div>
 
@@ -558,6 +600,7 @@
   <div class="container">
     
     <div class="text-center mb-5" data-aos="fade-up">
+        <p class="wedding-subtitle text-uppercase tracking-widest mb-2">Gifts</p>
       <h2 class="section-title">Wedding Gift</h2>
       <div class="gold-line"></div>
       <p class="wedding-subtitle mt-3">
@@ -598,7 +641,30 @@
             </div>
           </div>
           <div>
-            <button onclick="copyText('rek-bca', '1234567890')" class="btn-copy-gold">
+            <button onclick="copyText('rek-bca', '8171511500')" class="btn-copy-gold">
+              <i class="bi bi-files"></i> Salin No. Rekening
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="gift-card-box d-flex flex-column justify-content-center">
+          
+          <div class="atm-card-dark text-start">
+            <div class="d-flex justify-content-between align-items-start">
+               <img src="assets/chip.png" class="atm-chip" alt="Chip">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Logo_Bank_Kalbar.png" class="atm-logo" alt="Bank Logo">
+            </div>
+            
+            <div class="mt-2">
+              <small class="text-white opacity-50" style="letter-spacing: 2px;">NOMOR REKENING</small>
+              <div class="atm-number" id="rek-bca">8030 0577 84</div>
+              <div class="atm-name">A.N. IBNU SYAFARI</div>
+            </div>
+          </div>
+          <div>
+            <button onclick="copyText('rek-bca', '8030057784')" class="btn-copy-gold">
               <i class="bi bi-files"></i> Salin No. Rekening
             </button>
           </div>
@@ -611,11 +677,24 @@
           <h5 class="gift-title mb-3">Dompet Digital</h5>
           
           <div class="qr-wrapper">
-             <img src="assets/QR Dana Sri.jpeg" class="qr-img" alt="QR Code DANA">
+             <img src="https://res.cloudinary.com/dir7zfoqj/image/upload/v1770216216/QR_Dana_Sri_jhwh3d.jpg" class="qr-img" alt="QR Code DANA">
           </div>
           
           <h5 class="mt-3 text-white fw-bold">DANA</h5>
           <p class="gift-desc mb-0">a.n. Sri Wahyuni</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="gift-card-box">
+          <h5 class="gift-title mb-3">Dompet Digital</h5>
+          
+          <div class="qr-wrapper">
+             <img src="https://res.cloudinary.com/dir7zfoqj/image/upload/v1770216215/QR_dana_ibnu_vekgnm.jpg" class="qr-img" alt="QR Code DANA">
+          </div>
+          
+          <h5 class="mt-3 text-white fw-bold">DANA</h5>
+          <p class="gift-desc mb-0">a.n. Ibnu Syafari</p>
         </div>
       </div>
 
@@ -681,7 +760,7 @@
     </button>
 
     <audio id="bg-music" loop>
-        <source src="assets/audio/song.mp3" type="audio/mp3">
+        <source src="https://res.cloudinary.com/dir7zfoqj/video/upload/v1770216270/song_wiffmb.mp4" type="audio/mp3">
     </audio>
 
 
@@ -732,6 +811,41 @@
             console.error("Error: Elemen Modal tidak ditemukan!");
         }
     }
+</script>
+
+<script>
+window.addEventListener("load", function () {
+
+  setTimeout(() => {
+
+    const params = new URLSearchParams(window.location.search);
+    const rawName = params.get('to') || params.get('u');
+    const rawPartner = params.get('p');
+
+    if (!rawName) return;
+
+    const cleanText = str =>
+      decodeURIComponent(str.replace(/\+/g, ' '))
+        .replace(/[<>]/g, '')
+        .replace(/\s+/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase())
+        .trim();
+
+    const guestName = cleanText(rawName);
+    const partnerName = rawPartner ? cleanText(rawPartner) : null;
+
+    const heroEl = document.getElementById('nama-tamu');
+    if (heroEl) {
+      heroEl.innerText = partnerName
+        ? `${guestName} & ${partnerName}`
+        : guestName;
+    }
+
+    const inputNama = document.getElementById('nama');
+    if (inputNama) inputNama.value = guestName;
+
+  }, 300); // ⬅️ delay aman
+});
 </script>
 
 </body>
