@@ -28,29 +28,52 @@ document.addEventListener('DOMContentLoaded', () => {
         bgMusic.currentTime = 0;
     }
 
-    // --- B. NAMA TAMU DARI URL ---
-    const params = new URLSearchParams(window.location.search);
-    const rawName = params.get('to') || params.get('u');
-    const rawPartner = params.get('p');
+    document.addEventListener("DOMContentLoaded", function () {
 
-    const capitalizeWords = str => str ? str.replace(/\b\w/g, c => c.toUpperCase()) : '';
 
-    if (rawName) {
-        const guestName = capitalizeWords(decodeURIComponent(rawName).replace(/[<>]/g, "")); 
-        const partnerName = rawPartner ? capitalizeWords(decodeURIComponent(rawPartner).replace(/[<>]/g, "")) : null;
-        const finalName = partnerName ? `${guestName} & ${partnerName}` : guestName;
+const params = new URLSearchParams(window.location.search);
+const rawName = params.get('to') || params.get('u');
+const rawPartner = params.get('p');
 
-        // Tampilkan di Cover
-        const guestDisplays = document.querySelectorAll('.nama-tamu'); 
-        guestDisplays.forEach(el => el.innerText = finalName);
 
-        // Isi Otomatis di Form RSVP
-        const inputNama = document.getElementById('nama');
-        if (inputNama) inputNama.value = finalName;
-    } else {
-        const guestDefault = document.getElementById('nama-tamu');
-        if (guestDefault) guestDefault.innerText = "Tamu Kehormatan";
-    }
+const capitalizeWords = str =>
+str.replace(/\b\w/g, c => c.toUpperCase());
+
+
+const cleanText = str =>
+capitalizeWords(
+decodeURIComponent(str.replace(/\+/g, ' '))
+.replace(/[<>]/g, '')
+.replace(/\s+/g, ' ')
+.trim()
+);
+
+
+const heroEl = document.getElementById('nama-tamu'); // ⬅️ HERO
+
+
+if (rawName && heroEl) {
+const guestName = cleanText(rawName);
+const partnerName = rawPartner ? cleanText(rawPartner) : null;
+
+
+// HERO (boleh pakai partner)
+heroEl.innerText = partnerName
+? `${guestName} & ${partnerName}`
+: guestName;
+
+
+// RSVP (nama utama saja)
+const inputNama = document.getElementById('nama');
+if (inputNama) inputNama.value = guestName;
+
+
+} else if (heroEl) {
+heroEl.innerText = "Tamu Kehormatan";
+}
+
+
+});
 
     // --- C. TOMBOL BUKA UNDANGAN (FIX ANIMASI DISINI) ---
     const btnOpen = document.getElementById('btn-open');
